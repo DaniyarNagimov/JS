@@ -1,0 +1,24 @@
+<script>
+	/* Продолжить работу с интернет-магазином:
+	В прошлом домашнем задании вы реализовали корзину на базе массивов. Какими объектами можно заменить их элементы?
+	Реализуйте такие объекты.
+	Перенести функционал подсчета корзины на объектно-ориентированную базу.*/
+
+	let basketPrice = [
+			{prodcut_id: 1, name: 'Туфли', amount: 2, price: 3000},
+			{prodcut_id: 2, name: 'Пиджак', amount: 1, price: 5000},
+			{prodcut_id: 3, name: 'Брюки', amount: 1, price: 1999},
+			{prodcut_id: 4, name: 'Футболка', amount: 3, price: 567},
+			{prodcut_id: 5, name: 'Шляпа', amount: 1, price: 1237}
+			];
+
+	function countBasket(basket) {
+		let sumBasket = 0;
+		for (let position of basket) {
+			sumBasket += position?.amount * position?.price;
+		}
+		return sumBasket;
+	}
+
+console.log(`Сумма: ${countBasket(basketPrice)} рублей`);
+</script>
